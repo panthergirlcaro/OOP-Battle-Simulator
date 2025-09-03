@@ -1,4 +1,6 @@
+import random
 class Hero:
+
     """
     This is our hero blueprint.
     
@@ -23,9 +25,12 @@ class Hero:
     
 
     def strike(self):
+        return random.randint(3, self.attack_power)
         # TODO Implement the hero's attack logic. It could be stronger or more consistent than a goblin's.
     
     def receive_damage(self, damage):
+        self.health -= damage
+        print(f"{self.name} takes {damage} damage. Health is now {self.health}.")
         # TODO Implement take_damage
         # TODO We should prevent health from going into the NEGATIVE
     
