@@ -42,6 +42,7 @@ def main():
 
         if hero.is_alive():
              dragon = baby_dragon("DRAGON")
+             print("nooo")
              print("/Boss ROund!")
              while hero.is_alive() and dragon.is_alive():
                 damage = hero.strike()
