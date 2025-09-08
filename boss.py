@@ -21,7 +21,7 @@ class baby_dragon(Enemy):
     def attack(self):
         choice = random.choice(["normal", "fireee"])
         if choice == "fireee":
-            return self.fireee()
+            return self.fireee
         else:
             if self.health < 50:
                 self.attack_power = 75

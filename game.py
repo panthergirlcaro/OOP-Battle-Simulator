@@ -40,6 +40,16 @@ def main():
                 print(f"{goblin.name} attacks hero for {damage} damage!")
                 hero.receive_damage(damage)
 
+        if hero.is_alive():
+             dragon = baby_dragon("DRAGON")
+             print("/Boss ROund!")
+             while hero.is_alive() and dragon.is_alive():
+                damage = hero.strike()
+                dragon.take_damage(damage)
+
+                damage = dragon.attack()
+                hero.receive_damage(damage)
+
     # Determine outcome
     if hero.is_alive():
         print(f"\nThe hero has defeated all the goblins! ༼ ᕤ◕◡◕ ༽ᕤ")
